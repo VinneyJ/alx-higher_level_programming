@@ -2,7 +2,7 @@
 class Square:
     """Private instance attribute: size"""
     def __init__(self, size=0):
-        if not isinstance(size, int):
+        if type(size) is not int:
             "size must be an integer, otherwise raise a TypeError"
             raise TypeError("size must be an integer")
         if size < 0:
