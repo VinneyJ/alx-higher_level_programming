@@ -1,0 +1,52 @@
+=====================
+Using ``add_integer``
+=====================
+
+This function adds two intagers and returns the value.
+
+Handling Ints and Floats
+------------------------
+
+``add_integer()`` handles integer and floating values
+
+::
+
+	>>> add_integer = __import__('0-add_integer').add_integer
+	>>> add_integer(3, 4)
+	7
+
+	>>> add_integer(3**2, 2)
+	11
+
+	>>> add_integer(100, -2)
+	98
+
+Other Datatypes
+---------------
+
+Any string value raises an error message
+
+::
+
+	>>> add_integer("Vincent", 200)
+	a must be an integer
+
+	>>> add_integer(700, "me")
+	b must be an integer
+
+Passing the wrong number of values will return an
+error ```add_integer`` accepts only two arguments
+
+::
+
+	>>> add_integer(1, 2, ...) #doctest: +ELLIPSIS
+	Traceback (most recent call last):
+	TypeError: add_integer() takes from 1 to 2 positional arguments but 3 were given
+
+	>>> add_integer(500)
+	598
+
+	>>> add_integer()
+	Traceback (most recent call last):
+	TypeError: add_integer() missing 1 required positional argument: 'a'
+
