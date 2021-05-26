@@ -1,5 +1,9 @@
 #!/usr/bin/python3
-class Rectangle:
+"""
+This class contains an empty class Rectangle
+"""
 
+
+class Rectangle:
     """This is an empty class"""
     pass
