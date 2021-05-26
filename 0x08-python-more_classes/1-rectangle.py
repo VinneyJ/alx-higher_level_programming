@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+"""
+class with setters and properties.
+"""
 
 
 class Rectangle:
