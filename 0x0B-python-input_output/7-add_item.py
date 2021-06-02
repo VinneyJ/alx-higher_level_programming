@@ -22,4 +22,4 @@ except Exception as e:
 else:
     for arg in argv[1:]:
         data.append(arg)
-    save_to_json_file(data, filename
+    save_to_json_file(data, filename)
