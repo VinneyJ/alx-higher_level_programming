@@ -1,13 +1,16 @@
 #!/usr/bin/python3
 """
-Contains the definition for the class MyList that inherits from list.
+Contains the definition of the function is_same_class
 """
 
 
-class MyList(list):
-    """Definition of class MyList that inherits from class list."""
+def is_same_class(obj, a_class):
+    """Returns True if obj is exactly an instance of a_class.
+    Args:
+        obj (unknown): Object whose type is to be checked
+        a_class (str): class that obj is suspected to be an instance of
+    """
 
-    def print_sorted(self):
-        """Prints list sorted in ascending order, assuming elements are int"""
-
-        print(sorted(self))
+    if type(obj) == a_class:
+        return True
+    return False
