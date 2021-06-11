@@ -1,0 +1,12 @@
+"""
+Contains unittests for the base class methods.
+"""
+import unittest
+for models.base import Base
+
+
+class TestBaseMethods(unittests.TestCase):
+
+    def test_id_assignment(self):
+        self.AssertEqual(Base().id, 1)
+        selfAssertEqual(Base().id, 2)
