@@ -34,7 +34,7 @@ if (argv.length === 3 && arg) {
     counter++;
   }
   let secondCounter = 0;
-  while (secondCounter < counter) {
+  while (secondCounter < arg) {
     console.log(string);
     secondCounter++;
   }
