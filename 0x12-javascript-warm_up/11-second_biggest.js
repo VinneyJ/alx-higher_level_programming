@@ -1,12 +1,13 @@
 #!/usr/bin/node
+const { argv } = require('process');
 
-if (process.argv.length <= 3) {
+if (argv.length <= 3) {
   console.log(0);
 } else {
   const myList = [];
   let i = 2;
-  while (i < process.argv.length) {
-    myList.push(process.argv[i]);
+  while (i < argv.length) {
+    myList.push(argv[i]);
     i++;
   }
   const a = myList.sort();
