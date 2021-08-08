@@ -24,6 +24,6 @@ if __name__ == "__main__":
     for state in states:
         if state[1] == sys.argv[4]:
             print(state)
-    print("Item is not available")
+    # print("Item is not available")
     cur.close()
     conn.close()
