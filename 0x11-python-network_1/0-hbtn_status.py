@@ -4,11 +4,5 @@
 import urllib.request
 
 
-url = "https://intranet.hbtn.io/status"
-
-with urllib.request.urlopen(url) as response:
-    html = response.read()
-print("Body response:")
-print("\t- type:", type(html))
-print("\t- content:", html)
-print("\t- utf8 content:", html.decode("utf-8"))
+with urllib.request.urlopen('https://intranet.hbtn.io/status') as response:
+    print("\t- {}".format(response.read()))
