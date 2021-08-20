@@ -1,4 +1,6 @@
 #!/usr/bin/python3
+
+""" It fetches Url """
 import urllib.request
 
 
