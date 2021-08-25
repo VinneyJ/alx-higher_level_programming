@@ -1,16 +1,14 @@
-import urllib.request
-import urllib.parse
-import sys
+#!/usr/bin/python3
 
 """ Takes an email sends a post """
 if __name__ == "__main__":
-    arg1 = sys.argv[1]
-    arg2 = sys.argv[2]
-    values = {}
-    values["email"] = arg2
+    import urllib.request
+    import urllib.parse
+    import sys
 
-    data = urllib.parse.urlencode(values)
-    data = data.encode("utf-8")
-    req = urllib.request.Request(arg1, data)
+    value = {'email': sys.argv[2]}
+    data = urllib.parse.urlencode(value)
+    data = data.encode('ascii')
+    req = urllib.request.Request(sys.argv[1], data)
     with urllib.request.urlopen(req) as response:
-        print(response.read().decode("utf-8"))
+        print(response.read().decode("utf-8", "replace"))
