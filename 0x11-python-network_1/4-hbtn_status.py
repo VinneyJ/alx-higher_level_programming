@@ -1,8 +1,13 @@
 #!/usr/bin/python3
-import requests
+"""
+script that fetches https://intranet.hbtn.io/status
+
+"""
 
 
 if __name__ == "__main__":
+    import requests
+    
     url = "https://intranet.hbtn.io/status"
     req = requests.get(url)
     print("Body response:")
