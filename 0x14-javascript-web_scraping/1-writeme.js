@@ -12,4 +12,3 @@ fs.writeFile(argv[2], content, err => {
   }
   // console.log('written succesfully');
 });
-
