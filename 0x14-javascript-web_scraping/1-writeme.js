@@ -4,12 +4,13 @@ const { argv } = require('process');
 
 const fs = require('fs');
 
+
 const content = argv[3];
 
-try {
-  fs.writeFileSync(argv[2], content);
-  // file written successfully
-  console.log('written succesfully');
-} catch (err) {
-  console.error(err);
-}
+fs.writeFile(argv[2], content, err => {
+  if (err) {
+    console.error(err)
+    return
+ }
+   console.log('written succesfully');
+})
