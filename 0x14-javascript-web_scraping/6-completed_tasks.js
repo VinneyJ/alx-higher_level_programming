@@ -1,24 +1,17 @@
+
 #!/usr/bin/node
-
 const request = require('request');
-const url = process.argv[2];
-
-request(url, (error, response, body) => {
-  if (error) {
-    console.log(error);
+request(process.argv[2], function (error, response, body) {
+  if (!error) {
+    const todos = JSON.parse(body);
+    let completed = {};
+    todos.forEach((todo) => {
+      if (todo.completed && completed[todo.userId] === undefined) {
+        completed[todo.userId] = 1;
+      } else if (todo.completed) {
+        completed[todo.userId] += 1;
+      }
+    });
+    console.log(completed);
   }
-
-  const myDict = {};
-  const bodyText = JSON.parse(body);
-  const i = 0;
-
-  while (i < bodyText.length) {
-    const user = bodyText[i].userId;
-    if (user in myDict) {
-      myDict[user] += 1;
-    } else {
-      myDict[user] = 1;
-    }
-  }
-  console.log(myDict);
 });
